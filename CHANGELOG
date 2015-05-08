@@ -1,0 +1,7 @@
+v0.1.0:
+  date: 2015-05-08
+  changes:
+    - Initial version.
+    - Task working correctly.
+    - Testing 5 cases: faker, chance, array, integer and boolean
+    - Travis CI

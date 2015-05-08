@@ -1,0 +1,44 @@
+{
+  "name": "grunt-jsonschema-faker",
+  "description": "Grunt task generating fake data according to JSON schema",
+  "version": "0.1.0",
+  "author": "Tomasz Ducin <tomasz.ducin@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tkoomzaaskz/grunt-jsonschema-faker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tkoomzaaskz/grunt-jsonschema-faker/issues"
+  },
+  "homepage": "https://github.com/tkoomzaaskz/grunt-jsonschema-faker",
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "json-schema-faker": "^0.1.6"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-internal": "^0.4.12",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-nodeunit": "^0.4.1",
+    "lodash": "^3.8.0"
+  },
+  "peerDependencies": {
+    "grunt": ">=0.4.0"
+  },
+  "keywords": [
+    "gruntplugin",
+    "json",
+    "jsonschema",
+    "file"
+  ],
+  "files": [
+    "tasks"
+  ]
+}
