@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "statement1": {
+      "type": "string",
+      "faker": {
+        "custom.statement": [19]
+      }
+    },
+    "statement2": {
+      "type": "string",
+      "faker": {
+        "custom.statement": [12]
+      }
+    }
+  },
+  "required": [
+    "statement1",
+    "statement2"
+  ]
+}

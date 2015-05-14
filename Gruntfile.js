@@ -44,9 +44,26 @@ module.exports = function (grunt) {
             boolean: {
                 src: 'test/fixtures/boolean.json',
                 dest: 'tmp/boolean.json'
+            },
+            fakerExtended: {
+                src: 'test/fixtures/faker-extended.json',
+                dest: 'tmp/faker-extended.json',
+                options: {
+                    size: 30,
+                    extend: function(jsf) {
+                        jsf.extend('faker', function(faker){
+                            faker.locale = "pl"; // or any other language
+                            faker.custom = {
+                                statement: function(length) {
+                                    return faker.name.firstName() + " has " + faker.finance.amount() + " on " + faker.finance.account(length) + ".";
+                                }
+                            };
+                            return faker;
+                        });
+                    }
+                }
             }
         },
-
         jshint: {
             all: [
                 'Gruntfile.js',

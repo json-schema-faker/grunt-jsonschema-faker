@@ -2,7 +2,8 @@ Task targets, files and options may be specified according to the grunt [Configu
 
 [![grunt-jsonschema-faker npm module](https://nodei.co/npm/grunt-jsonschema-faker.png?downloads=true&stars=true "grunt-jsonschema-faker npm module")](https://www.npmjs.com/package/grunt-jsonschema-faker)
 
-![grunt-jsonschema-faker dependency status](https://david-dm.org/tkoomzaaskz/grunt-jsonschema-faker.png "grunt-jsonschema-faker dependency status")
+[![Dependency Status](https://david-dm.org/tkoomzaaskz/grunt-jsonschema-faker/status.svg)](https://david-dm.org/tkoomzaaskz/grunt-jsonschema-faker)
+[![devDependency Status](https://david-dm.org/tkoomzaaskz/grunt-jsonschema-faker/dev-status.svg)](https://david-dm.org/tkoomzaaskz/grunt-jsonschema-faker#info=devDependencies)
 
 Executes [`json-schema-faker`](https://github.com/pateketrueke/json-schema-faker)
 over a [JSON Schema](http://json-schema.org/) file to produce randomized data

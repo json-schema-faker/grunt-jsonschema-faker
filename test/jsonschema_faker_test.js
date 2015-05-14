@@ -70,6 +70,16 @@ exports.jsonschema_faker = {
       'Should generate 1 boolean element');
 
     test.done();
+  },
+  fakerExtended: function(test) {
+    test.expect(1);
+
+    assertJSON(test,
+      'tmp/faker-extended.json',
+      30,
+      'Should generate 30 faker-extended elements');
+
+    test.done();
   }
 };
   

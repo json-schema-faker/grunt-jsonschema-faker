@@ -1,1 +1,7 @@
-630
+{
+  "type": "integer",
+  "minimum": 600,
+  "maximum": 700,
+  "multipleOf": 7,
+  "exclusiveMinimum": true
+}

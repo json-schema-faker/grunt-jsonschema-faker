@@ -17,6 +17,9 @@ module.exports = function(grunt) {
   
   grunt.registerMultiTask('jsonschema_faker', 'generating fake data', function(){
     var options = this.options();
+    if (options.extend) {
+        options.extend(jsf);
+    }
     this.files.forEach(function (f) {
       var cwd = path.normalize(f.orig.cwd || ''),
           cwdAbs = path.resolve(cwd || '.'),
