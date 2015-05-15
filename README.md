@@ -1,4 +1,4 @@
-# grunt-jsonschema-faker v0.1.1 [![Build Status: Linux](https://travis-ci.org/tkoomzaaskz/grunt-jsonschema-faker.svg?branch=master)](https://travis-ci.org/tkoomzaaskz/grunt-jsonschema-faker)
+# grunt-jsonschema-faker v0.1.2 [![Build Status: Linux](https://travis-ci.org/tkoomzaaskz/grunt-jsonschema-faker.svg?branch=master)](https://travis-ci.org/tkoomzaaskz/grunt-jsonschema-faker)
 
 > Grunt task generating fake data according to JSON schema
 
@@ -62,7 +62,52 @@ function accepts one argument, being `jsf` object itself on which `.extend`
 may be called to alter faker.js and chance.js. The grunt-level (outer extend
 function) doesn't have to return anything.
 
+#### external
+Type: `array` of `object`s
+
+If defined, grunt will load external sources and let them re-use them in your
+generated fake data (local grunt target). This is useful when you want to
+generate several fake files in which data is **related**.
+
+###### external source parameters
+
+The `external` option needs to be an array of objects, each of them needs to
+have following 4 fields defined:
+
+ * *`name`*: `string`. This is just a name of the external source. It will be used in the JSON schema (as a `json-schema-faker` *custom format*)
+ * *`generator`*: `string` [`random`|`cycle`]. Currently, two generators are provided, but you may write your own
+ * *`src`*: `string`. Path to the external data source file.
+ * *`map`*: `function`. This function will be used by [`_.map`](https://lodash.com/docs#map) to modify each element from the source file. You may return only the *id* of each source element, but you may as well need to return a complex structure to re-use.
+
+Read the following section if you're not familiar with *external sources*.
+
+###### example
+
+Let's analyse a typical use case.
+
+For example, groups of users are generated in `group.json` file and the users
+are generated in `user.json`. Each user object should have `groupId` attribute
+that points to a group object (which has an `id` attribute) in `group.json`
+file. But, since both files are generated using a separate grunt task/target,
+how can we generate exactly the same values in both files, `group.json` and
+`user.json`, if using a random hash function?
+
+This is where the `external` option comes in. You can mock entire database
+keeping consistent relations between files.
+
+###### explanation
+
+ * first, you need to specify the order in which the files are generated. In our example `group.json` comes first, then it's `user.json`, because it needs groups to generate itself. `group.json` file might be whatever you want - it might be generated dynamically as well. The `user.json` defines the `external` option.
+ * when `user.json` is about to be generated, the grunt task iterates over `external` definitions. For each external source:
+   * it loads the content from `src` file
+   * map all elements using given `map` function
+   * creates a *closure* that will have access to the mapped collection.  The closure returns single values (which are products of `map`) and the strategy depends on `generator` used.
+   * the closure is registered as an ordinary [`json-schema-faker` custom format](https://github.com/pateketrueke/json-schema-faker#custom-formats) using the `name` 
+   * the JSON schema will handle custom `name` format.
+
 ### Usage Examples
+
+#### Basic
 
     grunt.initConfig({
         jsonschema_faker: {
@@ -82,6 +127,8 @@ function) doesn't have to return anything.
 It is also important to define the JSON schema properly. Use [JSON schema
 generator](http://jsonschema.net/#/) along with [`json-schema-faker` online
 demo](http://json-schema-faker.js.org/) for faster development.
+
+#### Extending dependencies
 
 You may also want to extend faker.js and/or chance. In order to do that, define
 a `extend` option function (for each target or globally):
@@ -109,9 +156,40 @@ a `extend` option function (for each target or globally):
         }
     });
 
+#### External Sources
+
+Following example illustrates using external sources to generate relative data:
+
+    grunt.initConfig({
+        jsonschema_faker: {
+            externalSources: {
+                src: 'schema/external-sources.json',
+                dest: 'data/external-sources.json',
+                options: {
+                    external: [{
+                        name: 'randomUserId',
+                        generator: 'random',
+                        src: 'data/faker.json',
+                        map: function(element) {
+                            return element.id;
+                        }
+                    }, {
+                        name: 'cycledSsn',
+                        generator: 'cycle',
+                        src: 'data/chance.json',
+                        map: function(element) {
+                            return element.ssn;
+                        }
+                    }]
+                }
+            }
+        }
+    });
+
 
 ## Release History
 
+ * 2015-05-15   v0.1.2   External sources support.
  * 2015-05-14   v0.1.1   Fixed test definitions. Updated json-schema-faker to 0.1.9. Allowing extending faker.js and chance.js, new test case.
  * 2015-05-08   v0.1.0   Initial version. Task working correctly. Testing 5 cases - faker, chance, array, integer and boolean. Travis CI integration.
 
@@ -119,4 +197,4 @@ a `extend` option function (for each target or globally):
 
 Task submitted by [Tomasz Ducin](http://ducin.it)
 
-*This file was generated on Thu May 14 2015 7:12:01.*
+*This file was generated on Fri May 15 2015 19:32:02.*

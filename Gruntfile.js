@@ -27,7 +27,7 @@ module.exports = function (grunt) {
                 src: 'test/fixtures/chance.json',
                 dest: 'tmp/chance.json',
                 options: {
-                    size: 2
+                    size: 3
                 }
             },
             array: {
@@ -61,6 +61,28 @@ module.exports = function (grunt) {
                             return faker;
                         });
                     }
+                }
+            },
+            externalSources: {
+                src: 'test/fixtures/external-sources.json',
+                dest: 'tmp/external-sources.json',
+                options: {
+                    size: 15,
+                    external: [{
+                        name: 'randomUserId',
+                        generator: 'random',
+                        src: 'tmp/faker.json',
+                        map: function(element) {
+                            return element.id;
+                        }
+                    }, {
+                        name: 'cycledSsn',
+                        generator: 'cycle',
+                        src: 'tmp/chance.json',
+                        map: function(element) {
+                            return element.ssn;
+                        }
+                    }]
                 }
             }
         },

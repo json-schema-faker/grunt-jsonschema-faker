@@ -5,6 +5,10 @@
       "type": "string",
       "chance": "guid"
     },
+    "ssn": {
+      "type": "string",
+      "chance": "ssn"
+    },
     "emailAddr": {
       "type": "string",
       "chance": {
@@ -17,6 +21,7 @@
   },
   "required": [
     "userId",
+    "ssn",
     "emailAddr"
   ]
 }

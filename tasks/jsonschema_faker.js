@@ -10,11 +10,13 @@
 
 'use strict';
 
+
 module.exports = function(grunt) {
+  var path = require('path');
   var _ = require('lodash');
   var jsf = require('json-schema-faker');
-  var path = require('path');
-  
+  var externalGenerators = require('../generators');
+
   grunt.registerMultiTask('jsonschema_faker', 'generating fake data', function(){
     var options = this.options();
     if (options.extend) {
@@ -36,6 +38,12 @@ module.exports = function(grunt) {
               return true;
           }
       }).map(function(file){
+        _.each(options.external, function(externalOptions){
+            var externalContent = grunt.file.readJSON(externalOptions.src);
+            var collection = _.map(externalContent, externalOptions.map);
+            var generator = externalGenerators[externalOptions.generator];
+            jsf.formats(externalOptions.name, generator(collection));
+        });
         var schema = grunt.file.readJSON(file);
         var result = !options.size ? jsf(schema) :
             _.map(_.range(options.size), function(){

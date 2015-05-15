@@ -36,7 +36,7 @@ exports.jsonschema_faker = {
 
     assertJSON(test,
       'tmp/chance.json',
-      2,
+      3,
       'Should generate 2 chance elements');
 
     test.done();
@@ -78,6 +78,16 @@ exports.jsonschema_faker = {
       'tmp/faker-extended.json',
       30,
       'Should generate 30 faker-extended elements');
+
+    test.done();
+  },
+  externalSources: function(test) {
+    test.expect(1);
+
+    assertJSON(test,
+      'tmp/external-sources.json',
+      15,
+      'Should generate 15 elements with external sources re-used');
 
     test.done();
   }

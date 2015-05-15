@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "string",
+      "format": "randomUserId"
+    },
+    "userSsn": {
+      "type": "string",
+      "format": "cycledSsn"
+    },
+    "comment": {
+      "type": "string",
+      "faker": "lorem.sentence"
+    }
+  },
+  "required": [
+    "userId",
+    "comment"
+  ]
+}
