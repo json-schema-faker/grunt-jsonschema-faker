@@ -1,4 +1,4 @@
-# grunt-jsonschema-faker v0.1.2 [![Build Status: Linux](https://travis-ci.org/tkoomzaaskz/grunt-jsonschema-faker.svg?branch=master)](https://travis-ci.org/tkoomzaaskz/grunt-jsonschema-faker)
+# grunt-jsonschema-faker v0.1.3 [![Build Status: Linux](https://travis-ci.org/tkoomzaaskz/grunt-jsonschema-faker.svg?branch=master)](https://travis-ci.org/tkoomzaaskz/grunt-jsonschema-faker)
 
 > Grunt task generating fake data according to JSON schema
 
@@ -189,7 +189,8 @@ Following example illustrates using external sources to generate relative data:
 
 ## Release History
 
- * 2015-05-15   v0.1.2   External sources support.
+ * 2015-05-15   v0.1.3   Fixed missing file in v0.1.2.
+ * 2015-05-15   v0.1.2   Deprecated. External sources support.
  * 2015-05-14   v0.1.1   Fixed test definitions. Updated json-schema-faker to 0.1.9. Allowing extending faker.js and chance.js, new test case.
  * 2015-05-08   v0.1.0   Initial version. Task working correctly. Testing 5 cases - faker, chance, array, integer and boolean. Travis CI integration.
 
@@ -197,4 +198,4 @@ Following example illustrates using external sources to generate relative data:
 
 Task submitted by [Tomasz Ducin](http://ducin.it)
 
-*This file was generated on Fri May 15 2015 19:32:02.*
+*This file was generated on Fri May 15 2015 20:06:40.*
