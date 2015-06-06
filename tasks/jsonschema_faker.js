@@ -1,11 +1,11 @@
 /**
  * grunt-jsonschema-faker is a Grunt task generating fake data according to JSON schema
  *
- * @see https://github.com/tkoomzaaskz/grunt-jsonschema-faker
+ * @see https://github.com/ducin/grunt-jsonschema-faker
  *
- * @author Tomasz Ducin <tomasz.ducin@gmail.com> (https://github.com/tkoomzaaskz)
+ * @author Tomasz Ducin <tomasz.ducin@gmail.com> (https://github.com/ducin)
  * @copyright © 2015 Tomasz Ducin
- * @license MIT https://raw.github.com/tkoomzaaskz/grunt-jsonschema-faker/blob/master/LICENSE
+ * @license MIT https://raw.github.com/ducin/grunt-jsonschema-faker/blob/master/LICENSE
  */
 
 'use strict';

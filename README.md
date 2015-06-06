@@ -1,4 +1,4 @@
-# grunt-jsonschema-faker v0.1.3 [![Build Status: Linux](https://travis-ci.org/tkoomzaaskz/grunt-jsonschema-faker.svg?branch=master)](https://travis-ci.org/tkoomzaaskz/grunt-jsonschema-faker)
+# grunt-jsonschema-faker v0.1.4 [![Build Status: Linux](https://travis-ci.org/ducin/grunt-jsonschema-faker.svg?branch=master)](https://travis-ci.org/ducin/grunt-jsonschema-faker)
 
 > Grunt task generating fake data according to JSON schema
 
@@ -29,8 +29,8 @@ Task targets, files and options may be specified according to the grunt [Configu
 
 [![grunt-jsonschema-faker npm module](https://nodei.co/npm/grunt-jsonschema-faker.png?downloads=true&stars=true "grunt-jsonschema-faker npm module")](https://www.npmjs.com/package/grunt-jsonschema-faker)
 
-[![Dependency Status](https://david-dm.org/tkoomzaaskz/grunt-jsonschema-faker/status.svg)](https://david-dm.org/tkoomzaaskz/grunt-jsonschema-faker)
-[![devDependency Status](https://david-dm.org/tkoomzaaskz/grunt-jsonschema-faker/dev-status.svg)](https://david-dm.org/tkoomzaaskz/grunt-jsonschema-faker#info=devDependencies)
+[![Dependency Status](https://david-dm.org/ducin/grunt-jsonschema-faker/status.svg)](https://david-dm.org/ducin/grunt-jsonschema-faker)
+[![devDependency Status](https://david-dm.org/ducin/grunt-jsonschema-faker/dev-status.svg)](https://david-dm.org/ducin/grunt-jsonschema-faker#info=devDependencies)
 
 Executes [`json-schema-faker`](https://github.com/pateketrueke/json-schema-faker)
 over a [JSON Schema](http://json-schema.org/) file to produce randomized data
@@ -189,6 +189,7 @@ Following example illustrates using external sources to generate relative data:
 
 ## Release History
 
+ * 2015-06-07   v0.1.4   Moving ownership (user rename) tkoomzaaskz:ducin.
  * 2015-05-15   v0.1.3   Fixed missing file in v0.1.2.
  * 2015-05-15   v0.1.2   Deprecated. External sources support.
  * 2015-05-14   v0.1.1   Fixed test definitions. Updated json-schema-faker to 0.1.9. Allowing extending faker.js and chance.js, new test case.
@@ -198,4 +199,4 @@ Following example illustrates using external sources to generate relative data:
 
 Task submitted by [Tomasz Ducin](http://ducin.it)
 
-*This file was generated on Fri May 15 2015 20:06:40.*
+*This file was generated on Sun Jun 07 2015 01:22:49.*

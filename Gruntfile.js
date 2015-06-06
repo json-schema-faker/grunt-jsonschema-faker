@@ -1,6 +1,6 @@
 /*
  * grunt-jsonschema-faker
- * https://github.com/tkoomzaaskz/grunt-jsonschema-faker
+ * https://github.com/ducin/grunt-jsonschema-faker
  *
  * Copyright (c) 2015 Tomasz Ducin
  * Licensed under the MIT license.
