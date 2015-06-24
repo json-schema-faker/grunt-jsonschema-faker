@@ -1,4 +1,4 @@
-# grunt-jsonschema-faker v0.1.4 [![Build Status: Linux](https://travis-ci.org/ducin/grunt-jsonschema-faker.svg?branch=master)](https://travis-ci.org/ducin/grunt-jsonschema-faker)
+# grunt-jsonschema-faker v0.1.5 [![Build Status: Linux](https://travis-ci.org/ducin/grunt-jsonschema-faker.svg?branch=master)](https://travis-ci.org/ducin/grunt-jsonschema-faker)
 
 > Grunt task generating fake data according to JSON schema
 
@@ -189,6 +189,7 @@ Following example illustrates using external sources to generate relative data:
 
 ## Release History
 
+ * 2015-06-24   v0.1.5   dependency update / version bump
  * 2015-06-07   v0.1.4   Moving ownership (user rename) tkoomzaaskz:ducin.
  * 2015-05-15   v0.1.3   Fixed missing file in v0.1.2.
  * 2015-05-15   v0.1.2   Deprecated. External sources support.
@@ -199,4 +200,4 @@ Following example illustrates using external sources to generate relative data:
 
 Task submitted by [Tomasz Ducin](http://ducin.it)
 
-*This file was generated on Sun Jun 07 2015 01:22:49.*
+*This file was generated on Wed Jun 24 2015 11:29:09.*
