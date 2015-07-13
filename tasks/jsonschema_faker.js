@@ -22,6 +22,14 @@ module.exports = function(grunt) {
     if (options.extend) {
         options.extend(jsf);
     }
+
+    var references = [];
+    if (options.references) {
+      grunt.file.expand(options.references).forEach(function(f){
+        references.push(grunt.file.readJSON(f));
+      });
+    }
+
     this.files.forEach(function (f) {
       var cwd = path.normalize(f.orig.cwd || ''),
           cwdAbs = path.resolve(cwd || '.'),
@@ -47,7 +55,7 @@ module.exports = function(grunt) {
         var schema = grunt.file.readJSON(file);
         var result = !options.size ? jsf(schema) :
             _.map(_.range(options.size), function(){
-              return jsf(schema);
+              return jsf(schema, references);
             });
         var destination = path.normalize(f.orig.dest);
         grunt.log.ok('Writing file ' + destination + '.\n');

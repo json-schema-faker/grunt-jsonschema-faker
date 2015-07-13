@@ -1,4 +1,4 @@
-# grunt-jsonschema-faker v0.1.6 [![Build Status: Linux](https://travis-ci.org/ducin/grunt-jsonschema-faker.svg?branch=master)](https://travis-ci.org/ducin/grunt-jsonschema-faker)
+# grunt-jsonschema-faker v0.1.7 [![Build Status: Linux](https://travis-ci.org/ducin/grunt-jsonschema-faker.svg?branch=master)](https://travis-ci.org/ducin/grunt-jsonschema-faker)
 
 > Grunt task generating fake data according to JSON schema
 
@@ -61,6 +61,13 @@ If defined, the function may extend `json-schema-faker` dependencies. The
 function accepts one argument, being `jsf` object itself on which `.extend`
 may be called to alter faker.js and chance.js. The grunt-level (outer extend
 function) doesn't have to return anything.
+
+#### references
+Type: `files`
+
+If defined, jsf will load defined files and allow to use them as referenced
+subschemas. [Grunt's `file.expand`](http://gruntjs.com/api/grunt.file#grunt.file.expand)
+used to resolve file paths.
 
 #### external
 Type: `array` of `object`s
@@ -201,4 +208,4 @@ Following example illustrates using external sources to generate relative data:
 
 Task submitted by [Tomasz Ducin](http://ducin.it)
 
-*This file was generated on Thu Jun 25 2015 17:46:33.*
+*This file was generated on Mon Jul 13 2015 17:13:52.*

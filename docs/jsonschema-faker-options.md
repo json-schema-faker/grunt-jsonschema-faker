@@ -19,6 +19,13 @@ function accepts one argument, being `jsf` object itself on which `.extend`
 may be called to alter faker.js and chance.js. The grunt-level (outer extend
 function) doesn't have to return anything.
 
+## references
+Type: `files`
+
+If defined, jsf will load defined files and allow to use them as referenced
+subschemas. [Grunt's `file.expand`](http://gruntjs.com/api/grunt.file#grunt.file.expand)
+used to resolve file paths.
+
 ## external
 Type: `array` of `object`s
 
