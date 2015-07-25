@@ -16,6 +16,30 @@ module.exports = function (grunt) {
             options: {
                 indent: 2
             },
+            multi: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: "test/fixtures",
+                        src: "?????.json",
+                        dest: "tmp/multi1",
+                        ext: '.json',
+                        rename: function (dest, src){
+                            return dest + "/renamed-"+src;
+                        }
+                    },
+                    {
+                        expand: true,
+                        cwd: "test/fixtures",
+                        src: "???????.json",
+                        dest: "tmp/multi2",
+                        ext: '.json',
+                        rename: function (dest, src){
+                            return dest + "/renamed-"+src;
+                        }
+                    }
+                ]
+            },
             faker: {
                 src: 'test/fixtures/faker.json',
                 dest: 'tmp/faker.json',

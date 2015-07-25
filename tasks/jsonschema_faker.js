@@ -57,7 +57,7 @@ module.exports = function(grunt) {
             _.map(_.range(options.size), function(){
               return jsf(schema, references);
             });
-        var destination = path.normalize(f.orig.dest);
+        var destination = path.normalize(f.dest);
         grunt.log.ok('Writing file ' + destination + '.\n');
         grunt.file.write(destination, JSON.stringify(result, null, options.indent));
       });
