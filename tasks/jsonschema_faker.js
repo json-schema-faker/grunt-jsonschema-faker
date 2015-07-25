@@ -53,7 +53,7 @@ module.exports = function(grunt) {
             jsf.formats(externalOptions.name, generator(collection));
         });
         var schema = grunt.file.readJSON(file);
-        var result = !options.size ? jsf(schema) :
+        var result = !options.size ? jsf(schema, references) :
             _.map(_.range(options.size), function(){
               return jsf(schema, references);
             });
