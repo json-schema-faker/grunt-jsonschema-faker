@@ -1,6 +1,16 @@
 var _ = require('lodash');
 
 module.exports = {
+    index: function (){
+        var ind = 0;
+        return function (faker, item){
+            var from  = parseInt(item.from);
+            if ((ind === 0) && (from > 0)){
+                ind = from;
+            } 
+            return ind++;
+        };
+    },
     random: function(collection) {
         return function(){
             return _.sample(collection);

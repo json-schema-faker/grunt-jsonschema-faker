@@ -54,6 +54,13 @@ module.exports = function (grunt) {
                     size: 3
                 }
             },
+            list: {
+                src: 'test/fixtures/list.json',
+                dest: 'tmp/list.json',
+                options: {
+                    size: 5 
+                }
+            },
             array: {
                 src: 'test/fixtures/array.json',
                 dest: 'tmp/array.json',

@@ -29,6 +29,7 @@ module.exports = function(grunt) {
         references.push(grunt.file.readJSON(f));
       });
     }
+    jsf.formats("index", externalGenerators["index"]());
 
     this.files.forEach(function (f) {
       var cwd = path.normalize(f.orig.cwd || ''),

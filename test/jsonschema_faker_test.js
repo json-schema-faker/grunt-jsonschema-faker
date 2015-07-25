@@ -41,6 +41,24 @@ exports.jsonschema_faker = {
 
     test.done();
   },
+  list: function(test) {
+    test.expect(3);
+    var isIndexOk = true,
+      listItems = JSON.parse(readFile('tmp/list.json')),
+      index, 
+      startIndex = listItems[0].id;
+
+    test.equal(listItems.length, 5, "The list contains 5 items.");
+    test.equal(startIndex, 10, "Index starts from 10.");
+    for (index=0; index<listItems.length; index++){
+      console.log(listItems[index]);
+      if (index + startIndex !== listItems[index].id){
+        isIndexOk = false;
+      }
+    }
+    test.ok(isIndexOk, "The index has an ascending order.");
+    test.done();
+  },
   array: function(test) {
     test.expect(1);
 
