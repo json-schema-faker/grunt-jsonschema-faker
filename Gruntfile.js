@@ -8,37 +8,13 @@
 
 'use strict';
 
-module.exports = function (grunt) {
+module.exports = function (grunt){
 
     // Project configuration.
     grunt.initConfig({
         jsonschema_faker: {
             options: {
                 indent: 2
-            },
-            multi: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: "test/fixtures",
-                        src: "?????.json",
-                        dest: "tmp/multi1",
-                        ext: '.json',
-                        rename: function (dest, src){
-                            return dest + "/renamed-"+src;
-                        }
-                    },
-                    {
-                        expand: true,
-                        cwd: "test/fixtures",
-                        src: "???????.json",
-                        dest: "tmp/multi2",
-                        ext: '.json',
-                        rename: function (dest, src){
-                            return dest + "/renamed-"+src;
-                        }
-                    }
-                ]
             },
             faker: {
                 src: 'test/fixtures/faker.json',
@@ -76,16 +52,40 @@ module.exports = function (grunt) {
                 src: 'test/fixtures/boolean.json',
                 dest: 'tmp/boolean.json'
             },
+            multi: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: "test/fixtures",
+                        src: "?????.json", // 5-letter-long files
+                        dest: "tmp/multi1",
+                        ext: '.json',
+                        rename: function (dest, src){
+                            return dest + "/renamed-" + src;
+                        }
+                    },
+                    {
+                        expand: true,
+                        cwd: "test/fixtures",
+                        src: "???????.json", // 7-letter-long files
+                        dest: "tmp/multi2",
+                        ext: '.json',
+                        rename: function (dest, src){
+                            return dest + "/renamed-" + src;
+                        }
+                    }
+                ]
+            },
             fakerExtended: {
                 src: 'test/fixtures/faker-extended.json',
                 dest: 'tmp/faker-extended.json',
                 options: {
                     size: 30,
-                    extend: function(jsf) {
+                    extend: function(jsf){
                         jsf.extend('faker', function(faker){
                             faker.locale = "pl"; // or any other language
                             faker.custom = {
-                                statement: function(length) {
+                                statement: function(length){
                                     return faker.name.firstName() + " has " + faker.finance.amount() + " on " + faker.finance.account(length) + ".";
                                 }
                             };
@@ -103,14 +103,14 @@ module.exports = function (grunt) {
                         name: 'randomUserId',
                         generator: 'random',
                         src: 'tmp/faker.json',
-                        map: function(element) {
+                        map: function(element){
                             return element.id;
                         }
                     }, {
                         name: 'cycledSsn',
                         generator: 'cycle',
                         src: 'tmp/chance.json',
-                        map: function(element) {
+                        map: function(element){
                             return element.ssn;
                         }
                     }]

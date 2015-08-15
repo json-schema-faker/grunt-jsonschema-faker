@@ -11,35 +11,42 @@
 'use strict';
 
 
-module.exports = function(grunt) {
+module.exports = function(grunt){
   var path = require('path');
   var _ = require('lodash');
   var jsf = require('json-schema-faker');
+  var externalFormats = require('../formats');
   var externalGenerators = require('../generators');
 
   grunt.registerMultiTask('jsonschema_faker', 'generating fake data', function(){
     var options = this.options();
-    if (options.extend) {
+    if (options.extend){
         options.extend(jsf);
     }
 
+    // if there are any externals defined, then load generators to handle them
+    // (https://github.com/ducin/grunt-jsonschema-faker#external)
     var references = [];
-    if (options.references) {
+    if (options.references){
       grunt.file.expand(options.references).forEach(function(f){
         references.push(grunt.file.readJSON(f));
       });
     }
-    jsf.formats("index", externalGenerators["index"]());
 
-    this.files.forEach(function (f) {
+    // load additional JSON-Schema-faker formats
+    _.each(externalFormats, function(formatFunction, formatName){
+        jsf.formats(formatName, formatFunction());
+    });
+
+    this.files.forEach(function (f){
       var cwd = path.normalize(f.orig.cwd || ''),
           cwdAbs = path.resolve(cwd || '.'),
           expand = !!f.orig.expand;
-      f.src.map(function (file) {
+      f.src.map(function (file){
           file = path.normalize(file);
           return path.resolve(cwdAbs, (expand && cwd.length && (file.indexOf(cwd + path.sep) === 0)) ? file.substr(cwd.length + path.sep.length) : file);
-      }).filter(function (file) {
-          if (!grunt.file.exists(file)) {
+      }).filter(function (file){
+          if (!grunt.file.exists(file)){
               grunt.log.warn('Source file "' + file + '" not found.');
               return false;
           } else {

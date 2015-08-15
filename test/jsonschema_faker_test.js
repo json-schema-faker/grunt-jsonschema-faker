@@ -51,7 +51,6 @@ exports.jsonschema_faker = {
     test.equal(listItems.length, 5, "The list contains 5 items.");
     test.equal(startIndex, 10, "Index starts from 10.");
     for (index=0; index<listItems.length; index++){
-      console.log(listItems[index]);
       if (index + startIndex !== listItems[index].id){
         isIndexOk = false;
       }
