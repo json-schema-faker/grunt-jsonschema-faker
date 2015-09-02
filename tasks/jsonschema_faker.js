@@ -1,11 +1,11 @@
 /**
  * grunt-jsonschema-faker is a Grunt task generating fake data according to JSON schema
  *
- * @see https://github.com/ducin/grunt-jsonschema-faker
+ * @see https://github.com/json-schema-faker/grunt-jsonschema-faker
  *
  * @author Tomasz Ducin <tomasz.ducin@gmail.com> (https://github.com/ducin)
  * @copyright © 2015 Tomasz Ducin
- * @license MIT https://raw.github.com/ducin/grunt-jsonschema-faker/blob/master/LICENSE
+ * @license MIT https://raw.github.com/json-schema-faker/grunt-jsonschema-faker/blob/master/LICENSE
  */
 
 'use strict';
@@ -25,7 +25,7 @@ module.exports = function(grunt){
     }
 
     // if there are any externals defined, then load generators to handle them
-    // (https://github.com/ducin/grunt-jsonschema-faker#external)
+    // (https://github.com/json-schema-faker/grunt-jsonschema-faker#external)
     var references = [];
     if (options.references){
       grunt.file.expand(options.references).forEach(function(f){

@@ -1,5 +1,5 @@
 /**
- * @see https://github.com/pateketrueke/json-schema-faker#custom-formats
+ * @see https://github.com/json-schema-faker/json-schema-faker#custom-formats
  *
  * This file contains functions that extend JSON Schema Faker custom formats.
  */

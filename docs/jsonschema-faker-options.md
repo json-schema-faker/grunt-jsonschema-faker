@@ -66,5 +66,5 @@ keeping consistent relations between files.
    * it loads the content from `src` file
    * map all elements using given `map` function
    * creates a *closure* that will have access to the mapped collection.  The closure returns single values (which are products of `map`) and the strategy depends on `generator` used.
-   * the closure is registered as an ordinary [`json-schema-faker` custom format](https://github.com/pateketrueke/json-schema-faker#custom-formats) using the `name` 
+   * the closure is registered as an ordinary [`json-schema-faker` custom format](https://github.com/json-schema-faker/json-schema-faker#custom-formats) using the `name` 
    * the JSON schema will handle custom `name` format.

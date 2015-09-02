@@ -1,16 +1,16 @@
 {
   "name": "grunt-jsonschema-faker",
   "description": "Grunt task generating fake data according to JSON schema",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Tomasz Ducin <tomasz.ducin@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ducin/grunt-jsonschema-faker.git"
+    "url": "https://github.com/json-schema-faker/grunt-jsonschema-faker.git"
   },
   "bugs": {
-    "url": "https://github.com/ducin/grunt-jsonschema-faker/issues"
+    "url": "https://github.com/json-schema-faker/grunt-jsonschema-faker/issues"
   },
-  "homepage": "https://github.com/ducin/grunt-jsonschema-faker",
+  "homepage": "https://github.com/json-schema-faker/grunt-jsonschema-faker",
   "license": "MIT",
   "engines": {
     "node": ">=0.10.0"
@@ -40,6 +40,7 @@
   ],
   "files": [
     "tasks",
+    "formats.js",
     "generators.js"
   ]
 }

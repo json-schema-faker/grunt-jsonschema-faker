@@ -1,5 +1,5 @@
 /**
- * @see https://github.com/ducin/grunt-jsonschema-faker#external
+ * @see https://github.com/json-schema-faker/grunt-jsonschema-faker#external
  *
  * This file contains generator functions that are used as intermediate
  * preprocessors for external data collections loaded into JSON Schema.

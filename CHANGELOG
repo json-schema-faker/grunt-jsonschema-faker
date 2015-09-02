@@ -1,3 +1,17 @@
+v0.2.1:
+  date: 2015-09-02
+  changes:
+    - repository name changed (github json-schema-faker organisation created)
+    - 0.2.0 version relaetd config error fix
+v0.2.0:
+  date: 2015-08-15
+  changes:
+    - dependency update / version bump
+    - jozsef.kerekes contribution: multiple file conversion, sql-like auto-increment
+v0.1.7:
+  date: 2015-07-13
+  changes:
+    - references option supported
 v0.1.6:
   date: 2015-06-25
   changes:

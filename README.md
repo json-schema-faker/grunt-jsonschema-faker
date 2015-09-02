@@ -1,4 +1,4 @@
-# grunt-jsonschema-faker v0.2.0 [![Build Status: Linux](https://travis-ci.org/json-schema-faker/grunt-jsonschema-faker.svg?branch=master)](https://travis-ci.org/json-schema-faker/grunt-jsonschema-faker)
+# grunt-jsonschema-faker v0.2.1 [![Build Status: Linux](https://travis-ci.org/json-schema-faker/grunt-jsonschema-faker.svg?branch=master)](https://travis-ci.org/json-schema-faker/grunt-jsonschema-faker)
 
 > Grunt task generating fake data according to JSON schema
 
@@ -29,10 +29,10 @@ Task targets, files and options may be specified according to the grunt [Configu
 
 [![grunt-jsonschema-faker npm module](https://nodei.co/npm/grunt-jsonschema-faker.png?downloads=true&stars=true "grunt-jsonschema-faker npm module")](https://www.npmjs.com/package/grunt-jsonschema-faker)
 
-[![Dependency Status](https://david-dm.org/ducin/grunt-jsonschema-faker/status.svg)](https://david-dm.org/ducin/grunt-jsonschema-faker)
-[![devDependency Status](https://david-dm.org/ducin/grunt-jsonschema-faker/dev-status.svg)](https://david-dm.org/ducin/grunt-jsonschema-faker#info=devDependencies)
+[![Dependency Status](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker/status.svg)](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker)
+[![devDependency Status](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker/dev-status.svg)](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker#info=devDependencies)
 
-Executes [`json-schema-faker`](https://github.com/pateketrueke/json-schema-faker)
+Executes [`json-schema-faker`](https://github.com/json-schema-faker/json-schema-faker)
 over a [JSON Schema](http://json-schema.org/) file to produce randomized data
 that conforms to the schema. In other words, the schema specifies what might be
 the content of a JSON (it specifies content, structure, nesting, types, etc.)
@@ -109,7 +109,7 @@ keeping consistent relations between files.
    * it loads the content from `src` file
    * map all elements using given `map` function
    * creates a *closure* that will have access to the mapped collection.  The closure returns single values (which are products of `map`) and the strategy depends on `generator` used.
-   * the closure is registered as an ordinary [`json-schema-faker` custom format](https://github.com/pateketrueke/json-schema-faker#custom-formats) using the `name` 
+   * the closure is registered as an ordinary [`json-schema-faker` custom format](https://github.com/json-schema-faker/json-schema-faker#custom-formats) using the `name` 
    * the JSON schema will handle custom `name` format.
 
 ### Usage Examples
@@ -196,6 +196,9 @@ Following example illustrates using external sources to generate relative data:
 
 ## Release History
 
+ * 2015-09-02   v0.2.1   repository name changed (github json-schema-faker organisation created) 0.2.0 version relaetd config error fix
+ * 2015-08-15   v0.2.0   dependency update / version bump [object Object]
+ * 2015-07-13   v0.1.7   references option supported
  * 2015-06-25   v0.1.6   dependency update / version bump
  * 2015-06-24   v0.1.5   dependency update / version bump
  * 2015-06-07   v0.1.4   Moving ownership (user rename) tkoomzaaskz:ducin.
@@ -208,4 +211,4 @@ Following example illustrates using external sources to generate relative data:
 
 Task submitted by [Tomasz Ducin](http://ducin.it)
 
-*This file was generated on Sat Aug 15 2015 14:18:33.*
+*This file was generated on Wed Sep 02 2015 23:44:22.*
