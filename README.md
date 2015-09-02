@@ -1,4 +1,4 @@
-# grunt-jsonschema-faker v0.2.0 [![Build Status: Linux](https://travis-ci.org/ducin/grunt-jsonschema-faker.svg?branch=master)](https://travis-ci.org/ducin/grunt-jsonschema-faker)
+# grunt-jsonschema-faker v0.2.0 [![Build Status: Linux](https://travis-ci.org/json-schema-faker/grunt-jsonschema-faker.svg?branch=master)](https://travis-ci.org/json-schema-faker/grunt-jsonschema-faker)
 
 > Grunt task generating fake data according to JSON schema
 
