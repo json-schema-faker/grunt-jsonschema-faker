@@ -1,3 +1,7 @@
+v0.2.2:
+  date: 2015-09-03
+  changes:
+    - lodash as hard dependency (instead of devDependency)
 v0.2.1:
   date: 2015-09-02
   changes:
