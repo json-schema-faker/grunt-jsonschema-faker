@@ -135,6 +135,11 @@ module.exports = function (grunt){
         // Unit tests.
         nodeunit: {
             tests: ['test/*_test.js'],
+        },
+
+        // Post contrib-build.
+        concat: {
+            'README.md': ['docs/header.md', 'README.md']
         }
     });
 
@@ -151,6 +156,9 @@ module.exports = function (grunt){
     // then run this plugin's task(s), then test the result.
     grunt.registerTask('test', ['jshint', 'clean', 'jsonschema_faker', 'nodeunit']);
 
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.registerTask('build', ['build-contrib', 'concat']);
+
     // By default, lint and run all tests.
-    grunt.registerTask('default', ['jshint', 'test', 'build-contrib']);
+    grunt.registerTask('default', ['jshint', 'test', 'build']);
 };

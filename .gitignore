@@ -31,3 +31,4 @@ node_modules
 
 # Users IDEs
 nbproject
+.idea

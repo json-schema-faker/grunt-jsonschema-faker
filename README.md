@@ -1,3 +1,11 @@
+![Grunt JSON Schema Faker logo](logo/grunt-jsf-logo.png)
+
+[![grunt-jsonschema-faker npm module](https://nodei.co/npm/grunt-jsonschema-faker.png?downloads=true&stars=true "grunt-jsonschema-faker npm module")](https://www.npmjs.com/package/grunt-jsonschema-faker)
+
+[![NPM version](https://badge.fury.io/js/grunt-jsonschema-faker.png)](http://badge.fury.io/js/grunt-jsonschema-faker)
+[![Dependency Status](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker/status.svg)](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker)
+[![devDependency Status](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker/dev-status.svg)](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker#info=devDependencies)
+
 # grunt-jsonschema-faker v0.2.2 [![Build Status: Linux](https://travis-ci.org/json-schema-faker/grunt-jsonschema-faker.svg?branch=master)](https://travis-ci.org/json-schema-faker/grunt-jsonschema-faker)
 
 > Grunt task generating fake data according to JSON schema
@@ -19,18 +27,13 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-jsonschema-faker');
 ```
 
-*This plugin was designed to work with Grunt 0.4.x. If you're still using grunt v0.3.x it's strongly recommended that [you upgrade](http://gruntjs.com/upgrading-from-0.3-to-0.4), but in case you can't please use [v0.3.2](https://github.com/gruntjs/grunt-contrib-coffee/tree/grunt-0.3-stable).*
+*This plugin was designed to work with Grunt 0.4.x. If you're still using grunt v0.3.x it's strongly recommended that [you upgrade](http://gruntjs.com/upgrading-from-0.3-to-0.4).*
 
 
 ## Jsonschema-faker task
 _Run this task with the `grunt jsonschema-faker` command._
 
 Task targets, files and options may be specified according to the grunt [Configuring tasks](http://gruntjs.com/configuring-tasks) guide.
-
-[![grunt-jsonschema-faker npm module](https://nodei.co/npm/grunt-jsonschema-faker.png?downloads=true&stars=true "grunt-jsonschema-faker npm module")](https://www.npmjs.com/package/grunt-jsonschema-faker)
-
-[![Dependency Status](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker/status.svg)](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker)
-[![devDependency Status](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker/dev-status.svg)](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker#info=devDependencies)
 
 Executes [`json-schema-faker`](https://github.com/json-schema-faker/json-schema-faker)
 over a [JSON Schema](http://json-schema.org/) file to produce randomized data
@@ -196,6 +199,7 @@ Following example illustrates using external sources to generate relative data:
 
 ## Release History
 
+ * 2015-12-30   v0.2.3   dependency update / version bump
  * 2015-09-03   v0.2.2   lodash as hard dependency (instead of devDependency)
  * 2015-09-02   v0.2.1   repository name changed (github json-schema-faker organisation created) 0.2.0 version relaetd config error fix
  * 2015-08-15   v0.2.0   dependency update / version bump [object Object]
@@ -212,4 +216,4 @@ Following example illustrates using external sources to generate relative data:
 
 Task submitted by [Tomasz Ducin](http://ducin.it)
 
-*This file was generated on Thu Sep 03 2015 00:00:19.*
+*This file was generated on Wed Dec 30 2015 17:57:09.*
