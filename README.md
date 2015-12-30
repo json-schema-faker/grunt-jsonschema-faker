@@ -6,7 +6,7 @@
 [![Dependency Status](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker/status.svg)](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker)
 [![devDependency Status](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker/dev-status.svg)](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker#info=devDependencies)
 
-# grunt-jsonschema-faker v0.2.2 [![Build Status: Linux](https://travis-ci.org/json-schema-faker/grunt-jsonschema-faker.svg?branch=master)](https://travis-ci.org/json-schema-faker/grunt-jsonschema-faker)
+# grunt-jsonschema-faker v0.2.3 [![Build Status: Linux](https://travis-ci.org/json-schema-faker/grunt-jsonschema-faker.svg?branch=master)](https://travis-ci.org/json-schema-faker/grunt-jsonschema-faker)
 
 > Grunt task generating fake data according to JSON schema
 
@@ -216,4 +216,4 @@ Following example illustrates using external sources to generate relative data:
 
 Task submitted by [Tomasz Ducin](http://ducin.it)
 
-*This file was generated on Wed Dec 30 2015 17:57:09.*
+*This file was generated on Wed Dec 30 2015 18:02:37.*
