@@ -3,8 +3,8 @@
  *
  * @see https://github.com/json-schema-faker/grunt-jsonschema-faker
  *
- * @author Tomasz Ducin <tomasz.ducin@gmail.com> (https://github.com/ducin)
- * @copyright © 2015 Tomasz Ducin
+ * @author Tomasz Ducin <tomasz@ducin.it> (https://github.com/ducin)
+ * @copyright © 2015-2016 Tomasz Ducin
  * @license MIT https://raw.github.com/json-schema-faker/grunt-jsonschema-faker/blob/master/LICENSE
  */
 
