@@ -1,3 +1,7 @@
+v0.2.6:
+  date: 2016-02-13
+  changes:
+    - dependency update / version bump
 v0.2.5:
   date: 2016-02-05
   changes:
@@ -18,7 +22,7 @@ v0.2.1:
   date: 2015-09-02
   changes:
     - repository name changed (github json-schema-faker organisation created)
-    - 0.2.0 version relaetd config error fix
+    - 0.2.0 version related config error fix
 v0.2.0:
   date: 2015-08-15
   changes:
