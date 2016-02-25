@@ -225,3 +225,7 @@ grunt.initConfig({
 Task submitted by [Tomasz Ducin](http://ducin.it)
 
 *This file was generated on Sat Feb 13 2016 12:11:07.*
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/json-schema-faker/grunt-jsonschema-faker/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
