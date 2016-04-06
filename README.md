@@ -6,7 +6,7 @@
 [![Dependency Status](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker/status.svg)](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker)
 [![devDependency Status](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker/dev-status.svg)](https://david-dm.org/json-schema-faker/grunt-jsonschema-faker#info=devDependencies)
 
-# grunt-jsonschema-faker v0.2.6 [![Build Status: Linux](https://travis-ci.org/json-schema-faker/grunt-jsonschema-faker.svg?branch=master)](https://travis-ci.org/json-schema-faker/grunt-jsonschema-faker)
+# grunt-jsonschema-faker v0.2.7 [![Build Status: Linux](https://travis-ci.org/json-schema-faker/grunt-jsonschema-faker.svg?branch=master)](https://travis-ci.org/json-schema-faker/grunt-jsonschema-faker)
 
 > Grunt task generating fake data according to JSON schema
 
@@ -204,6 +204,7 @@ grunt.initConfig({
 
 ## Release History
 
+ * 2016-04-06   v0.2.7   dependency update / version bump
  * 2016-02-13   v0.2.6   dependency update / version bump
  * 2016-02-05   v0.2.5   dependency update / version bump
  * 2016-01-28   v0.2.4   dependency update / version bump
@@ -224,7 +225,7 @@ grunt.initConfig({
 
 Task submitted by [Tomasz Ducin](http://ducin.it)
 
-*This file was generated on Sat Feb 13 2016 12:11:07.*
+*This file was generated on Wed Apr 06 2016 21:55:12.*
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/json-schema-faker/grunt-jsonschema-faker/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
