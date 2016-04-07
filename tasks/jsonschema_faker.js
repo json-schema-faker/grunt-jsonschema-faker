@@ -35,7 +35,7 @@ module.exports = function(grunt){
 
     // load additional JSON-Schema-faker formats
     _.each(externalFormats, function(formatFunction, formatName){
-        jsf.formats(formatName, formatFunction());
+        jsf.format(formatName, formatFunction());
     });
 
     this.files.forEach(function (f){
@@ -58,7 +58,7 @@ module.exports = function(grunt){
             var externalContent = grunt.file.readJSON(externalOptions.src);
             var collection = _.map(externalContent, externalOptions.map);
             var generator = externalGenerators[externalOptions.generator];
-            jsf.formats(externalOptions.name, generator(collection));
+            jsf.format(externalOptions.name, generator(collection));
         });
         var schema = grunt.file.readJSON(file);
         var result = !options.size ? jsf(schema, references) :

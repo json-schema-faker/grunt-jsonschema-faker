@@ -204,6 +204,7 @@ grunt.initConfig({
 
 ## Release History
 
+ * 2016-04-07   v0.3.0   dependency update json-schema-faker@0.3.0
  * 2016-04-06   v0.2.7   dependency update / version bump
  * 2016-02-13   v0.2.6   dependency update / version bump
  * 2016-02-05   v0.2.5   dependency update / version bump
@@ -225,7 +226,7 @@ grunt.initConfig({
 
 Task submitted by [Tomasz Ducin](http://ducin.it)
 
-*This file was generated on Wed Apr 06 2016 21:55:12.*
+*This file was generated on Thu Apr 07 2016 19:21:15.*
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/json-schema-faker/grunt-jsonschema-faker/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
