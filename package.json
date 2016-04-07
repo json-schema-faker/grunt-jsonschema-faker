@@ -19,7 +19,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "json-schema-faker": "^0.2.16",
+    "json-schema-faker": "^0.3.0",
     "lodash": "^4.8.2"
   },
   "devDependencies": {
