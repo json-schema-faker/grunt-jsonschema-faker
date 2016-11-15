@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "json-schema-faker": "^0.3.7",
-    "lodash": "^4.16.5"
+    "lodash": "^4.17.1"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
