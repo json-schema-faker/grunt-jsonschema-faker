@@ -57,7 +57,7 @@ module.exports = function(grunt){
         _.each(options.external, function(externalOptions){
             var externalContent = grunt.file.readJSON(externalOptions.src);
             var collection = _.map(externalContent, externalOptions.map);
-            var generator = externalGenerators[externalOptions.generator];
+            var generator = typeof externalOptions.generator === 'function' ? externalOptions.generator : externalGenerators[externalOptions.generator];
             jsf.format(externalOptions.name, generator(collection));
         });
         var schema = grunt.file.readJSON(file);
