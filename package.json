@@ -1,7 +1,7 @@
 {
   "name": "grunt-jsonschema-faker",
   "description": "Grunt task generating fake data according to JSON schema",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "author": "Tomasz Ducin <tomasz@ducin.it>",
   "repository": {
     "type": "git",

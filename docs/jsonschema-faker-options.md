@@ -39,7 +39,7 @@ The `external` option needs to be an array of objects, each of them needs to
 have following 4 fields defined:
 
  * *`name`*: `string`. This is just a name of the external source. It will be used in the JSON schema (as a `json-schema-faker` *custom format*)
- * *`generator`*: `string` [`random`|`cycle`]. Currently, two generators are provided, but you may write your own
+ * *`generator`*: `string`|`function`. Currently, the `string` option provides two generators (`random`|`cycle`), but you may use a `function` to provide your own custom [generator](https://github.com/json-schema-faker/grunt-jsonschema-faker/blob/master/generators.js).
  * *`src`*: `string`. Path to the external data source file.
  * *`map`*: `function`. This function will be used by [`_.map`](https://lodash.com/docs#map) to modify each element from the source file. You may return only the *id* of each source element, but you may as well need to return a complex structure to re-use.
 
@@ -66,5 +66,5 @@ keeping consistent relations between files.
    * it loads the content from `src` file
    * map all elements using given `map` function
    * creates a *closure* that will have access to the mapped collection.  The closure returns single values (which are products of `map`) and the strategy depends on `generator` used.
-   * the closure is registered as an ordinary [`json-schema-faker` custom format](https://github.com/json-schema-faker/json-schema-faker#custom-formats) using the `name` 
+   * the closure is registered as an ordinary [`json-schema-faker` custom format](https://github.com/json-schema-faker/json-schema-faker#custom-formats) using the `name`
    * the JSON schema will handle custom `name` format.
